@@ -1,8 +1,8 @@
 package com.sparta.gam.SafariPark;
 
 public class Person {
-    private String firstName;
-    private String lastName;
+    private String firstName = "";
+    private String lastName = "";
     private int age;
 
     public Person(String firstName, String lastName, int age){
@@ -10,7 +10,7 @@ public class Person {
         //assign the parameters to the previous
         this.firstName = firstName;
         this.lastName = lastName;
-        setAge();
+        setAge(age);
     }
 
     public Person(String firstName){
@@ -30,4 +30,14 @@ public class Person {
             this.age = age;
         }
     }
+
+    public Person(){}
+
+//    @Override
+//    public String toString() {
+//        return
+//                "firstName='" + firstName + '\'' +
+//                ", lastName='" + lastName + '\'' +
+//                ", age=" + age;
+//    }
 }

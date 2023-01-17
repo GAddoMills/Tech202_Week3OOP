@@ -43,4 +43,7 @@ public class PersonTest {
         p.setAge(inputAge);
         Assertions.assertEquals(expectedNewAge, p.getAge());
     }
+
+    //TEST SETNUMPASSENGERS ????
+
 }
