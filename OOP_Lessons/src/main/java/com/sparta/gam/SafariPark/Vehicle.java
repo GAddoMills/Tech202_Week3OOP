@@ -1,6 +1,6 @@
 package com.sparta.gam.SafariPark;
 
-public class Vehicle {
+public class Vehicle implements IMoveable{
     private int speed = 10;
     private int position;
     private int numPassengers;
@@ -37,7 +37,7 @@ public class Vehicle {
     }
 
     public void setNumPassengers(int numPassengers) {
-        if (numPassengers < capacity || numPassengers > 0){
+        if (numPassengers <= capacity && numPassengers >= 0){
             this.numPassengers = numPassengers;
         }
     }
@@ -50,5 +50,15 @@ public class Vehicle {
     public String move(int times){
         position = position + (times * speed);
         return "Moving along " + times + " times";
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "speed=" + speed +
+                ", position=" + position +
+                ", numPassengers=" + numPassengers +
+                ", capacity=" + capacity +
+                '}';
     }
 }

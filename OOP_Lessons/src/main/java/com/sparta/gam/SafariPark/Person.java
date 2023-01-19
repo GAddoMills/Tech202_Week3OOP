@@ -1,6 +1,6 @@
 package com.sparta.gam.SafariPark;
 
-public class Person {
+public class Person implements IMoveable{
     private String firstName = "";
     private String lastName = "";
     private int age;
@@ -33,11 +33,21 @@ public class Person {
 
     public Person(){}
 
-//    @Override
-//    public String toString() {
-//        return
-//                "firstName='" + firstName + '\'' +
-//                ", lastName='" + lastName + '\'' +
-//                ", age=" + age;
-//    }
+    @Override
+    public String toString() {
+        return
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age;
+    }
+
+    @Override
+    public String move() {
+        return getFullName() + " is moving";
+    }
+
+    @Override
+    public String move(int times) {
+        return getFullName() + " is moving" + times + " times";
+    }
 }
