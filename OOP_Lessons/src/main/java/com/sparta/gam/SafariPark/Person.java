@@ -5,6 +5,11 @@ public class Person implements IMoveable{
     private String lastName = "";
     private int age;
 
+
+
+
+
+
     public Person(String firstName, String lastName, int age){
         //useless as it there by default
         //assign the parameters to the previous
@@ -50,4 +55,6 @@ public class Person implements IMoveable{
     public String move(int times) {
         return getFullName() + " is moving" + times + " times";
     }
+
+
 }
