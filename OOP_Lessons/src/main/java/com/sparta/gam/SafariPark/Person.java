@@ -1,5 +1,6 @@
 package com.sparta.gam.SafariPark;
 
+
 import java.util.Objects;
 
 public class Person implements IMoveable, Comparable<Person> {
@@ -84,4 +85,5 @@ public class Person implements IMoveable, Comparable<Person> {
             return ((Integer)this.getAge()).compareTo((Integer)o.getAge());
         }
     }
+
 }
